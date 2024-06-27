@@ -1,24 +1,35 @@
 document.getElementById('convert-btn').addEventListener('click', function() {
-    const number = document.getElementById('number').value;
+    const number = parseInt(document.getElementById('number').value);
     const output = document.getElementById('output');
     const error = document.getElementById('error');
     const popup = document.getElementById('popup');
     const overlay = document.getElementById('overlay');
   
-    if (number === '') {
-      error.textContent = '';
+    if (isNaN(number)) {
+      error.textContent = 'Please enter a valid number.';
       openPopup();
+      return;
+    }
+  
+    if (number < 1) {
+      output.innerHTML = 'Please enter a number greater than or equal to 1.';
+      error.textContent = '';
+      return;
+    }
+  
+    if (number > 3999) {
+      output.innerHTML = 'Please enter a number less than or equal to 3999.';
+      error.textContent = '';
       return;
     }
   
     const roman = convertToRoman(number);
     if (roman) {
-      output.innerHTML = '';
-      output.innerHTML += `<span>${roman}</span>`;
+      output.innerHTML = `<span>${roman}</span>`;
       error.textContent = '';
     } else {
-      error.textContent = 'Please enter a valid number between 1 and 3999.';
       output.innerHTML = `<span>Enter the Number & hit convert</span>`;
+      error.textContent = 'Please enter a valid number between 1 and 3999.';
     }
   });
   
@@ -53,6 +64,7 @@ document.getElementById('convert-btn').addEventListener('click', function() {
   function openPopup() {
     const popup = document.getElementById('popup');
     const overlay = document.getElementById('overlay');
+    error.textContent = '';
     popup.style.display = 'block';
     overlay.style.display = 'block';
   }
