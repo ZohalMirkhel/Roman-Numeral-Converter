@@ -70,7 +70,7 @@ button {
   right: 0;
   bottom: 0;
   border-radius: 30px;
-  box-shadow: 0 0 20px rgba(0, 255, 247, 0.5); 
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.5);
   z-index: -1;
 }
 
@@ -104,4 +104,12 @@ button {
 p {
   color: #000;
   font-weight: 400;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-bottom: 40px;
 }
