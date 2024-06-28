@@ -1,15 +1,16 @@
 document.getElementById('convert-btn').addEventListener('click', function() {
-    const number = parseInt(document.getElementById('number').value);
-    const output = document.getElementById('output');
-    const error = document.getElementById('error');
-    const popup = document.getElementById('popup');
-    const overlay = document.getElementById('overlay');
+  const numberInput = document.getElementById('number');
+  const number = parseInt(numberInput.value);
+  const output = document.getElementById('output');
+  const error = document.getElementById('error');
+  const popup = document.getElementById('popup');
+  const overlay = document.getElementById('overlay');
   
-    if (isNaN(number)) {
-      error.textContent = 'Please enter a valid number.';
+    if (!numberInput.value) {
+      output.textContent = 'Please enter a valid number.';
       openPopup();
       return;
-    }
+  }
   
     if (number < 1) {
       output.innerHTML = 'Please enter a number greater than or equal to 1.';
