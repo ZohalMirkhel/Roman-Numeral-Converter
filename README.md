@@ -15,7 +15,7 @@ The Roman Number Converter is a simple web application that converts Arabic numb
 ## Live Demo
 
 ![alt text](convert.PNG)
-You can view a live demo of the project [here](https://zohalmirkhel.github.io/roman-converter/).
+You can view a live demo of the project [here](git@github.com:ZohalMirkhel/Roman-Numeral-Converter.git).
 
 
 ## Installation
@@ -25,11 +25,11 @@ To set up this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/zohalmirkhel/roman-converter.git
+   git clone https://github.com/zohalmirkhel/Roman-Numeral-Converter.git
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd roman-converter
+   cd Roman-Numeral-Converter
    ```
 
 3. **Open the `index.html` file in your browser**:
