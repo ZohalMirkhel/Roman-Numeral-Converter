@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Roman Numeral Converter</title>
+</head>
+<body>
+  <div class="box">
+    <h1 class="heading">Enter the Number You Want to Convert to Roman Numbers!</h1>
+    <div class="wrapper">
+      <input type="number" id="number" placeholder="Enter Number Here...">
+      <button type="button" id="convert-btn">Convert</button>
+    </div>
+    <div id="output">
+      <span>Enter the Number & hit convert</span>
+    </div>
+    <p id="error"></p>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+      <p>Please enter a valid number!</p>
+      <button onclick="closePopup()">OK</button>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
